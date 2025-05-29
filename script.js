@@ -235,17 +235,100 @@
                 <div class="snowflake">❄</div>
                 <div class="snowflake">❅</div>
             </div>`,
-      "171-bauhaus-circles-squares": `<div class="loader-placeholder"><div>171. Bauhaus Circles & Squares (Implement Me)</div></div>`,
-      "172-chevron-flow": `<div class="loader-placeholder"><div>172. Chevron Flow (Implement Me)</div></div>`,
-      "173-abstract-line-art": `<div class="loader-placeholder"><div>173. Abstract Line Art (Implement Me)</div></div>`,
-      "174-layered-parallax-shapes": `<div class="loader-placeholder"><div>174. Layered Parallax Shapes (Implement Me)</div></div>`,
-      "175-fractal-growth-simplified": `<div class="loader-placeholder"><div>175. Fractal Growth (Simplified) (Implement Me)</div></div>`,
-      "176-loading-ellipsis-animate": `<div class="loader-placeholder"><div>176. Loading Ellipsis Animate (Implement Me)</div></div>`,
-      "177-letter-by-letter-typewriter": `<div class="loader-placeholder"><div>177. Letter By Letter Typewriter (Implement Me)</div></div>`,
-      "178-wavy-text": `<div class="loader-placeholder"><div>178. Wavy Text (Implement Me)</div></div>`,
-      "179-text-scramble-unscramble": `<div class="loader-placeholder"><div>179. Text Scramble/Unscramble (Implement Me)</div></div>`,
-      "180-character-flip": `<div class="loader-placeholder"><div>180. Character Flip (Implement Me)</div></div>`,
-      "181-text-outline-draw": `<div class="loader-placeholder"><div>181. Text Outline Draw (Implement Me)</div></div>`,
+      "171-bauhaus-circles-squares": `<div class="loader-bauhaus-circles-squares">
+                <div class="shape circle"></div>
+                <div class="shape square"></div>
+                <div class="shape triangle"></div>
+            </div>`,
+      "172-chevron-flow": `<div class="loader-chevron-flow">
+                <div class="chevron"></div>
+                <div class="chevron"></div>
+                <div class="chevron"></div>
+                <div class="chevron"></div>
+                <div class="chevron"></div>
+                <div class="chevron"></div>
+            </div>`,
+      "173-dot-wave-2d": `<div class="loader-dot-wave-2d">
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+            </div>`,
+      "174-pixel-sort-abstract": `<div class="loader-pixel-sort-abstract">
+                <div class="pixel-line"></div>
+                <div class="pixel-line"></div>
+                <div class="pixel-line"></div>
+                <div class="pixel-line"></div>
+                <div class="pixel-line"></div>
+                <div class="pixel-line"></div>
+                <div class="pixel-line"></div>
+                <div class="pixel-line"></div>
+                <div class="pixel-line"></div>
+                <div class="pixel-line"></div>
+            </div>`,
+      "175-molecular-dots": `<div class="loader-molecular-dots">
+                <div class="molecule"></div>
+                <div class="molecule"></div>
+                <div class="molecule"></div>
+            </div>`,
+      "176-tesseract-fold-2d-projection": `<div class="loader-tesseract-fold-2d-projection">
+                <div class="face"></div>
+                <div class="face"></div>
+                <div class="face"></div>
+                <div class="face"></div>
+            </div>`,
+      "177-mondrian-blocks": `<div class="loader-mondrian-blocks">
+                <div class="block"></div>
+                <div class="block"></div>
+                <div class="block"></div>
+                <div class="block"></div>
+                <div class="block"></div>
+                <div class="block"></div>
+            </div>`,
+      "178-kaleidoscope-effect": `<div class="loader-kaleidoscope-effect">
+                <div class="segment"></div>
+                <div class="segment"></div>
+                <div class="segment"></div>
+                <div class="segment"></div>
+                <div class="segment"></div>
+                <div class="segment"></div>
+                <div class="segment"></div>
+                <div class="segment"></div>
+                <div class="segment"></div>
+                <div class="segment"></div>
+                <div class="segment"></div>
+                <div class="segment"></div>
+            </div>`,
+      "179-impossible-triangle-illusion": `<div class="loader-impossible-triangle-illusion">
+                <div class="side"></div>
+                <div class="side"></div>
+                <div class="side"></div>
+            </div>`,
+      "180-morphing-shapes": `<div class="loader-morphing-shapes">
+                <div class="shape"></div>
+            </div>`,
+      "181-matrix-code-rain": `<div class="loader-placeholder"><div>181. Matrix Code Rain (Implement Me)</div></div>`,
       "182-fading-letters-in-out": `<div class="loader-placeholder"><div>182. Fading Letters In/Out (Implement Me)</div></div>`,
       "183-text-to-dots-transition": `<div class="loader-placeholder"><div>183. Text to Dots Transition (Implement Me)</div></div>`,
       "184-code-block-typing": `<div class="loader-placeholder"><div>184. Code Block Typing (Implement Me)</div></div>`,

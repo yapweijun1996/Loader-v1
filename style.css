@@ -2841,3 +2841,436 @@ button:hover {
         opacity: 0; 
     } 
 }
+
+/* 171. Bauhaus Circles & Squares */
+.loader-bauhaus-circles-squares { 
+    width: 60px; 
+    height: 60px; 
+    position: relative; 
+}
+.loader-bauhaus-circles-squares .shape { 
+    position: absolute; 
+    animation: bauhaus-circles-squares-move 3s infinite ease-in-out; 
+}
+.loader-bauhaus-circles-squares .circle { 
+    width: 20px; 
+    height: 20px; 
+    background: var(--loader-color, #333); 
+    border-radius: 50%; 
+    top: 10px; 
+    left: 10px; 
+    animation-delay: 0s; 
+}
+.loader-bauhaus-circles-squares .square { 
+    width: 18px; 
+    height: 18px; 
+    background: var(--loader-color, #333); 
+    top: 30px; 
+    right: 10px; 
+    opacity: 0.8; 
+    animation-delay: 0.5s; 
+}
+.loader-bauhaus-circles-squares .triangle { 
+    width: 0; 
+    height: 0; 
+    border-left: 10px solid transparent; 
+    border-right: 10px solid transparent; 
+    border-bottom: 17px solid var(--loader-color, #333); 
+    bottom: 10px; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    opacity: 0.6; 
+    animation-delay: 1s; 
+}
+@keyframes bauhaus-circles-squares-move { 
+    0%, 100% { transform: scale(1) rotate(0deg); opacity: 0.8; } 
+    33% { transform: scale(1.2) rotate(120deg); opacity: 1; } 
+    66% { transform: scale(0.8) rotate(240deg); opacity: 0.6; } 
+}
+
+/* 172. Chevron Flow */
+.loader-chevron-flow { 
+    width: 60px; 
+    height: 60px; 
+    position: relative; 
+    overflow: hidden; 
+}
+.loader-chevron-flow .chevron { 
+    position: absolute; 
+    width: 20px; 
+    height: 20px; 
+    border-right: 3px solid var(--loader-color, #333); 
+    border-bottom: 3px solid var(--loader-color, #333); 
+    transform: rotate(-45deg); 
+    animation: chevron-flow-move 2s infinite ease-in-out; 
+}
+.loader-chevron-flow .chevron:nth-child(1) { 
+    top: 10px; 
+    left: -10px; 
+    animation-delay: 0s; 
+}
+.loader-chevron-flow .chevron:nth-child(2) { 
+    top: 10px; 
+    left: 10px; 
+    animation-delay: 0.2s; 
+}
+.loader-chevron-flow .chevron:nth-child(3) { 
+    top: 10px; 
+    left: 30px; 
+    animation-delay: 0.4s; 
+}
+.loader-chevron-flow .chevron:nth-child(4) { 
+    top: 30px; 
+    left: -10px; 
+    animation-delay: 0.6s; 
+}
+.loader-chevron-flow .chevron:nth-child(5) { 
+    top: 30px; 
+    left: 10px; 
+    animation-delay: 0.8s; 
+}
+.loader-chevron-flow .chevron:nth-child(6) { 
+    top: 30px; 
+    left: 30px; 
+    animation-delay: 1s; 
+}
+@keyframes chevron-flow-move { 
+    0% { transform: rotate(-45deg) translate(0, 0); opacity: 0; } 
+    50% { transform: rotate(-45deg) translate(20px, 0); opacity: 1; } 
+    100% { transform: rotate(-45deg) translate(40px, 0); opacity: 0; } 
+}
+
+/* 173. Dot Wave 2D */
+.loader-dot-wave-2d { 
+    width: 60px; 
+    height: 60px; 
+    position: relative; 
+    display: grid; 
+    grid-template-columns: repeat(5, 1fr); 
+    grid-template-rows: repeat(5, 1fr); 
+    gap: 2px; 
+}
+.loader-dot-wave-2d .dot { 
+    width: 8px; 
+    height: 8px; 
+    background: var(--loader-color, #333); 
+    border-radius: 50%; 
+    animation: dot-wave-2d-pulse 2s infinite ease-in-out; 
+}
+.loader-dot-wave-2d .dot:nth-child(1) { animation-delay: 0s; }
+.loader-dot-wave-2d .dot:nth-child(2) { animation-delay: 0.1s; }
+.loader-dot-wave-2d .dot:nth-child(3) { animation-delay: 0.2s; }
+.loader-dot-wave-2d .dot:nth-child(4) { animation-delay: 0.3s; }
+.loader-dot-wave-2d .dot:nth-child(5) { animation-delay: 0.4s; }
+.loader-dot-wave-2d .dot:nth-child(6) { animation-delay: 0.1s; }
+.loader-dot-wave-2d .dot:nth-child(7) { animation-delay: 0.2s; }
+.loader-dot-wave-2d .dot:nth-child(8) { animation-delay: 0.3s; }
+.loader-dot-wave-2d .dot:nth-child(9) { animation-delay: 0.4s; }
+.loader-dot-wave-2d .dot:nth-child(10) { animation-delay: 0.5s; }
+.loader-dot-wave-2d .dot:nth-child(11) { animation-delay: 0.2s; }
+.loader-dot-wave-2d .dot:nth-child(12) { animation-delay: 0.3s; }
+.loader-dot-wave-2d .dot:nth-child(13) { animation-delay: 0.4s; }
+.loader-dot-wave-2d .dot:nth-child(14) { animation-delay: 0.5s; }
+.loader-dot-wave-2d .dot:nth-child(15) { animation-delay: 0.6s; }
+.loader-dot-wave-2d .dot:nth-child(16) { animation-delay: 0.3s; }
+.loader-dot-wave-2d .dot:nth-child(17) { animation-delay: 0.4s; }
+.loader-dot-wave-2d .dot:nth-child(18) { animation-delay: 0.5s; }
+.loader-dot-wave-2d .dot:nth-child(19) { animation-delay: 0.6s; }
+.loader-dot-wave-2d .dot:nth-child(20) { animation-delay: 0.7s; }
+.loader-dot-wave-2d .dot:nth-child(21) { animation-delay: 0.4s; }
+.loader-dot-wave-2d .dot:nth-child(22) { animation-delay: 0.5s; }
+.loader-dot-wave-2d .dot:nth-child(23) { animation-delay: 0.6s; }
+.loader-dot-wave-2d .dot:nth-child(24) { animation-delay: 0.7s; }
+.loader-dot-wave-2d .dot:nth-child(25) { animation-delay: 0.8s; }
+@keyframes dot-wave-2d-pulse { 
+    0%, 100% { transform: scale(0.5); opacity: 0.3; } 
+    50% { transform: scale(1.2); opacity: 1; } 
+}
+
+/* 174. Pixel Sort Abstract */
+.loader-pixel-sort-abstract { 
+    width: 60px; 
+    height: 60px; 
+    position: relative; 
+    overflow: hidden; 
+}
+.loader-pixel-sort-abstract .pixel-line { 
+    position: absolute; 
+    width: 2px; 
+    background: var(--loader-color, #333); 
+    animation: pixel-sort-abstract-sort 3s infinite ease-in-out; 
+}
+.loader-pixel-sort-abstract .pixel-line:nth-child(1) { left: 5px; height: 20px; animation-delay: 0s; }
+.loader-pixel-sort-abstract .pixel-line:nth-child(2) { left: 10px; height: 35px; animation-delay: 0.1s; }
+.loader-pixel-sort-abstract .pixel-line:nth-child(3) { left: 15px; height: 15px; animation-delay: 0.2s; }
+.loader-pixel-sort-abstract .pixel-line:nth-child(4) { left: 20px; height: 40px; animation-delay: 0.3s; }
+.loader-pixel-sort-abstract .pixel-line:nth-child(5) { left: 25px; height: 25px; animation-delay: 0.4s; }
+.loader-pixel-sort-abstract .pixel-line:nth-child(6) { left: 30px; height: 30px; animation-delay: 0.5s; }
+.loader-pixel-sort-abstract .pixel-line:nth-child(7) { left: 35px; height: 10px; animation-delay: 0.6s; }
+.loader-pixel-sort-abstract .pixel-line:nth-child(8) { left: 40px; height: 45px; animation-delay: 0.7s; }
+.loader-pixel-sort-abstract .pixel-line:nth-child(9) { left: 45px; height: 20px; animation-delay: 0.8s; }
+.loader-pixel-sort-abstract .pixel-line:nth-child(10) { left: 50px; height: 35px; animation-delay: 0.9s; }
+@keyframes pixel-sort-abstract-sort { 
+    0% { transform: translateY(60px); opacity: 0; } 
+    50% { transform: translateY(0); opacity: 1; } 
+    100% { transform: translateY(-10px); opacity: 0; } 
+}
+
+/* 175. Molecular Dots */
+.loader-molecular-dots { 
+    width: 60px; 
+    height: 60px; 
+    position: relative; 
+}
+.loader-molecular-dots .molecule { 
+    position: absolute; 
+    width: 8px; 
+    height: 8px; 
+    background: var(--loader-color, #333); 
+    border-radius: 50%; 
+    animation: molecular-dots-orbit 4s infinite linear; 
+}
+.loader-molecular-dots .molecule:nth-child(1) { 
+    top: 26px; 
+    left: 26px; 
+    animation-delay: 0s; 
+}
+.loader-molecular-dots .molecule:nth-child(2) { 
+    top: 26px; 
+    left: 26px; 
+    animation-delay: -1s; 
+    animation-duration: 3s; 
+}
+.loader-molecular-dots .molecule:nth-child(3) { 
+    top: 26px; 
+    left: 26px; 
+    animation-delay: -2s; 
+    animation-duration: 5s; 
+}
+.loader-molecular-dots:before { 
+    content: ''; 
+    position: absolute; 
+    top: 50%; 
+    left: 50%; 
+    width: 4px; 
+    height: 4px; 
+    background: var(--loader-color, #333); 
+    border-radius: 50%; 
+    transform: translate(-50%, -50%); 
+    opacity: 0.8; 
+}
+@keyframes molecular-dots-orbit { 
+    0% { transform: translate(0, 0) rotate(0deg) translateX(20px) rotate(0deg); } 
+    100% { transform: translate(0, 0) rotate(360deg) translateX(20px) rotate(-360deg); } 
+}
+
+/* 176. Tesseract Fold 2D Projection */
+.loader-tesseract-fold-2d-projection { 
+    width: 60px; 
+    height: 60px; 
+    position: relative; 
+    perspective: 200px; 
+}
+.loader-tesseract-fold-2d-projection .face { 
+    position: absolute; 
+    width: 25px; 
+    height: 25px; 
+    border: 2px solid var(--loader-color, #333); 
+    animation: tesseract-fold-2d-projection-fold 3s infinite ease-in-out; 
+}
+.loader-tesseract-fold-2d-projection .face:nth-child(1) { 
+    top: 10px; 
+    left: 10px; 
+    animation-delay: 0s; 
+}
+.loader-tesseract-fold-2d-projection .face:nth-child(2) { 
+    top: 10px; 
+    right: 10px; 
+    animation-delay: 0.3s; 
+}
+.loader-tesseract-fold-2d-projection .face:nth-child(3) { 
+    bottom: 10px; 
+    left: 10px; 
+    animation-delay: 0.6s; 
+}
+.loader-tesseract-fold-2d-projection .face:nth-child(4) { 
+    bottom: 10px; 
+    right: 10px; 
+    animation-delay: 0.9s; 
+}
+@keyframes tesseract-fold-2d-projection-fold { 
+    0%, 100% { transform: rotateX(0deg) rotateY(0deg) scale(1); opacity: 1; } 
+    25% { transform: rotateX(90deg) rotateY(45deg) scale(0.8); opacity: 0.7; } 
+    50% { transform: rotateX(180deg) rotateY(90deg) scale(0.6); opacity: 0.5; } 
+    75% { transform: rotateX(270deg) rotateY(135deg) scale(0.8); opacity: 0.7; } 
+}
+
+/* 177. Mondrian Blocks */
+.loader-mondrian-blocks { 
+    width: 60px; 
+    height: 60px; 
+    position: relative; 
+    display: grid; 
+    grid-template-columns: 1fr 2fr 1fr; 
+    grid-template-rows: 2fr 1fr 1fr; 
+    gap: 2px; 
+}
+.loader-mondrian-blocks .block { 
+    background: var(--loader-color, #333); 
+    animation: mondrian-blocks-fill 2s infinite ease-in-out; 
+}
+.loader-mondrian-blocks .block:nth-child(1) { 
+    grid-column: 1; 
+    grid-row: 1; 
+    animation-delay: 0s; 
+}
+.loader-mondrian-blocks .block:nth-child(2) { 
+    grid-column: 2; 
+    grid-row: 1 / 3; 
+    animation-delay: 0.2s; 
+}
+.loader-mondrian-blocks .block:nth-child(3) { 
+    grid-column: 3; 
+    grid-row: 1; 
+    animation-delay: 0.4s; 
+}
+.loader-mondrian-blocks .block:nth-child(4) { 
+    grid-column: 1; 
+    grid-row: 2 / 4; 
+    animation-delay: 0.6s; 
+}
+.loader-mondrian-blocks .block:nth-child(5) { 
+    grid-column: 3; 
+    grid-row: 2; 
+    animation-delay: 0.8s; 
+}
+.loader-mondrian-blocks .block:nth-child(6) { 
+    grid-column: 2 / 4; 
+    grid-row: 3; 
+    animation-delay: 1s; 
+}
+@keyframes mondrian-blocks-fill { 
+    0%, 100% { opacity: 0.2; transform: scale(0.9); } 
+    50% { opacity: 1; transform: scale(1); } 
+}
+
+/* 178. Kaleidoscope Effect */
+.loader-kaleidoscope-effect { 
+    width: 60px; 
+    height: 60px; 
+    position: relative; 
+    animation: kaleidoscope-effect-rotate 4s linear infinite; 
+}
+.loader-kaleidoscope-effect .segment { 
+    position: absolute; 
+    top: 50%; 
+    left: 50%; 
+    width: 4px; 
+    height: 20px; 
+    background: var(--loader-color, #333); 
+    transform-origin: bottom center; 
+    animation: kaleidoscope-effect-pulse 2s infinite ease-in-out; 
+}
+.loader-kaleidoscope-effect .segment:nth-child(1) { transform: translate(-2px, -20px) rotate(0deg); animation-delay: 0s; }
+.loader-kaleidoscope-effect .segment:nth-child(2) { transform: translate(-2px, -20px) rotate(30deg); animation-delay: 0.1s; }
+.loader-kaleidoscope-effect .segment:nth-child(3) { transform: translate(-2px, -20px) rotate(60deg); animation-delay: 0.2s; }
+.loader-kaleidoscope-effect .segment:nth-child(4) { transform: translate(-2px, -20px) rotate(90deg); animation-delay: 0.3s; }
+.loader-kaleidoscope-effect .segment:nth-child(5) { transform: translate(-2px, -20px) rotate(120deg); animation-delay: 0.4s; }
+.loader-kaleidoscope-effect .segment:nth-child(6) { transform: translate(-2px, -20px) rotate(150deg); animation-delay: 0.5s; }
+.loader-kaleidoscope-effect .segment:nth-child(7) { transform: translate(-2px, -20px) rotate(180deg); animation-delay: 0.6s; }
+.loader-kaleidoscope-effect .segment:nth-child(8) { transform: translate(-2px, -20px) rotate(210deg); animation-delay: 0.7s; }
+.loader-kaleidoscope-effect .segment:nth-child(9) { transform: translate(-2px, -20px) rotate(240deg); animation-delay: 0.8s; }
+.loader-kaleidoscope-effect .segment:nth-child(10) { transform: translate(-2px, -20px) rotate(270deg); animation-delay: 0.9s; }
+.loader-kaleidoscope-effect .segment:nth-child(11) { transform: translate(-2px, -20px) rotate(300deg); animation-delay: 1s; }
+.loader-kaleidoscope-effect .segment:nth-child(12) { transform: translate(-2px, -20px) rotate(330deg); animation-delay: 1.1s; }
+@keyframes kaleidoscope-effect-rotate { 
+    0% { transform: rotate(0deg); } 
+    100% { transform: rotate(360deg); } 
+}
+@keyframes kaleidoscope-effect-pulse { 
+    0%, 100% { height: 20px; opacity: 0.6; } 
+    50% { height: 25px; opacity: 1; } 
+}
+
+/* 179. Impossible Triangle Illusion */
+.loader-impossible-triangle-illusion { 
+    width: 60px; 
+    height: 60px; 
+    position: relative; 
+    animation: impossible-triangle-illusion-rotate 3s linear infinite; 
+}
+.loader-impossible-triangle-illusion .side { 
+    position: absolute; 
+    width: 30px; 
+    height: 8px; 
+    background: var(--loader-color, #333); 
+    transform-origin: center; 
+}
+.loader-impossible-triangle-illusion .side:nth-child(1) { 
+    top: 15px; 
+    left: 15px; 
+    transform: rotate(0deg); 
+    animation: impossible-triangle-illusion-fade 3s infinite ease-in-out; 
+    animation-delay: 0s; 
+}
+.loader-impossible-triangle-illusion .side:nth-child(2) { 
+    top: 30px; 
+    left: 7px; 
+    transform: rotate(120deg); 
+    animation: impossible-triangle-illusion-fade 3s infinite ease-in-out; 
+    animation-delay: 1s; 
+}
+.loader-impossible-triangle-illusion .side:nth-child(3) { 
+    top: 30px; 
+    left: 23px; 
+    transform: rotate(240deg); 
+    animation: impossible-triangle-illusion-fade 3s infinite ease-in-out; 
+    animation-delay: 2s; 
+}
+@keyframes impossible-triangle-illusion-rotate { 
+    0% { transform: rotate(0deg); } 
+    100% { transform: rotate(360deg); } 
+}
+@keyframes impossible-triangle-illusion-fade { 
+    0%, 66%, 100% { opacity: 0.4; } 
+    33% { opacity: 1; } 
+}
+
+/* 180. Morphing Shapes */
+.loader-morphing-shapes { 
+    width: 60px; 
+    height: 60px; 
+    position: relative; 
+}
+.loader-morphing-shapes .shape { 
+    position: absolute; 
+    top: 50%; 
+    left: 50%; 
+    width: 30px; 
+    height: 30px; 
+    background: var(--loader-color, #333); 
+    transform: translate(-50%, -50%); 
+    animation: morphing-shapes-morph 4s infinite ease-in-out; 
+}
+@keyframes morphing-shapes-morph { 
+    0% { 
+        border-radius: 0%; 
+        transform: translate(-50%, -50%) rotate(0deg) scale(1); 
+    } 
+    25% { 
+        border-radius: 50%; 
+        transform: translate(-50%, -50%) rotate(90deg) scale(1.2); 
+    } 
+    50% { 
+        border-radius: 0% 50% 0% 50%; 
+        transform: translate(-50%, -50%) rotate(180deg) scale(0.8); 
+    } 
+    75% { 
+        border-radius: 50% 0% 50% 0%; 
+        transform: translate(-50%, -50%) rotate(270deg) scale(1.1); 
+    } 
+    100% { 
+        border-radius: 0%; 
+        transform: translate(-50%, -50%) rotate(360deg) scale(1); 
+    } 
+}
