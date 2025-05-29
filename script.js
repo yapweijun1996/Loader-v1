@@ -416,8 +416,6 @@
                 <div class="glitch-pixel"></div>
                 <div class="glitch-pixel"></div>
                 <div class="glitch-pixel"></div>
-                <div class="glitch-pixel"></div>
-                <div class="glitch-pixel"></div>
             </div>`,
       "189-laser-maze": `<div class="loader-laser-maze">
                 <div class="laser-beam"></div>
@@ -456,6 +454,12 @@
     const sizeValueSpan = document.getElementById("sizeValue");
     const startBtn = document.getElementById("startBtn");
     const hideLoaderBtn = document.getElementById("hideLoaderBtn");
+    const exportCodeBtn = document.getElementById("exportCodeBtn");
+    const codeModal = document.getElementById("codeModal");
+    const closeModalSpan = codeModal ? codeModal.querySelector(".close-button") : null;
+    const htmlCodeBlock = document.getElementById("htmlCode");
+    const cssCodeBlock = document.getElementById("cssCode");
+    const jsCodeBlock = document.getElementById("jsCode");
 
 
     function populateLoaderOptions() {
@@ -629,6 +633,47 @@
             }
         });
 
+        // Export Code button functionality
+        if (exportCodeBtn) {
+            exportCodeBtn.addEventListener("click", function() {
+                const selectedLoaderKey = presetSelect.value;
+                const loaderHtmlString = loaderHTML[selectedLoaderKey];
+                
+                // Display HTML (escape for safety)
+                if (htmlCodeBlock) {
+                    htmlCodeBlock.textContent = loaderHtmlString;
+                }
+                
+                // Placeholder for CSS and JS extraction (will implement later)
+                if (cssCodeBlock) {
+                    cssCodeBlock.textContent = "// CSS for this loader is in the style.css file";
+                }
+                if (jsCodeBlock) {
+                    jsCodeBlock.textContent = "// JavaScript is in the script.js file";
+                }
+                
+                if (codeModal) {
+                    codeModal.style.display = "block";
+                }
+            });
+        }
+
+        // Modal close button
+        if (closeModalSpan) {
+            closeModalSpan.addEventListener("click", function() {
+                if (codeModal) {
+                    codeModal.style.display = "none";
+                }
+            });
+        }
+
+        // Close modal when clicking outside of it
+        window.addEventListener("click", function(event) {
+            if (event.target == codeModal) {
+                codeModal.style.display = "none";
+            }
+        });
+
         const loaderContainer = document.getElementById('loaderContainer');
         const prevBtn = document.getElementById('prevBtn');
         const nextBtn = document.getElementById('nextBtn');
@@ -636,7 +681,9 @@
         let currentIndex = 0;
 
         // Initially show only the first loader
-        showLoader(currentIndex);
+        if (loaderContainer && prevBtn && nextBtn) {
+            showLoader(currentIndex);
+        }
 
         function showLoader(index) {
             // Hide all loaders
@@ -652,21 +699,25 @@
                 selectedLoader.style.display = 'flex'; // Or block, depending on desired layout
             }
             // Update button states
-            prevBtn.disabled = index === 0;
-            nextBtn.disabled = index === totalLoaders - 1;
+            if (prevBtn) prevBtn.disabled = index === 0;
+            if (nextBtn) nextBtn.disabled = index === totalLoaders - 1;
         }
 
-        prevBtn.addEventListener('click', () => {
-            if (currentIndex > 0) {
-                currentIndex--;
-                showLoader(currentIndex);
-            }
-        });
+        if (prevBtn) {
+            prevBtn.addEventListener('click', () => {
+                if (currentIndex > 0) {
+                    currentIndex--;
+                    showLoader(currentIndex);
+                }
+            });
+        }
 
-        nextBtn.addEventListener('click', () => {
-            if (currentIndex < totalLoaders - 1) {
-                currentIndex++;
-                showLoader(currentIndex);
-            }
-        });
+        if (nextBtn) {
+            nextBtn.addEventListener('click', () => {
+                if (currentIndex < totalLoaders - 1) {
+                    currentIndex++;
+                    showLoader(currentIndex);
+                }
+            });
+        }
     }); 
