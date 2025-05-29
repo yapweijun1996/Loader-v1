@@ -2374,12 +2374,63 @@
         0%, 100% { transform: scale(1); opacity: 1; }
         50% { transform: scale(1.2); opacity: 0.7; }
     }
-  </style>
-</head>
-<body>
 
-  <div id="startScreen">
-    <h1>200+ Modern Loaders</h1>
+    /* Modal Styles */
+    .modal {
+        display: none; /* Hidden by default */
+        position: fixed; /* Stay in place */
+        z-index: 10; /* Sit on top */
+        left: 0;
+        top: 0;
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        overflow: auto; /* Enable scroll if needed */
+        background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    }
+
+    .modal-content {
+        background-color: #fefefe;
+        margin: 10% auto; /* 10% from the top and centered */
+        padding: 20px;
+        border: 1px solid #888;
+        width: 80%; /* Could be more or less, depending on screen size */
+        max-width: 600px;
+        border-radius: 8px;
+        position: relative;
+    }
+
+    .close-button {
+        color: #aaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+    }
+
+    .close-button:hover,
+    .close-button:focus {
+        color: #000;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+    .code-section h3 {
+        margin-top: 15px;
+        margin-bottom: 5px;
+        border-bottom: 1px solid #eee;
+        padding-bottom: 5px;
+    }
+
+    .code-section pre {
+        background-color: #f8f8f8;
+        padding: 10px;
+        border-radius: 4px;
+        overflow-x: auto;
+    }
+
+    .code-section code {
+        font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+        font-size: 12px;
+    }
   </style>
 </head>
 <body>
@@ -2414,7 +2465,27 @@
 
     <hr>
 
+    <button id="exportCodeBtn">Export Code</button>
     <button id="hideLoaderBtn">Hide Loader</button>
+  </div>
+
+  <div id="codeModal" class="modal">
+    <div class="modal-content">
+      <span class="close-button">&times;</span>
+      <h2>Loader Code Snippet</h2>
+      <div class="code-section">
+        <h3>HTML</h3>
+        <pre><code id="htmlCode"></code></pre>
+      </div>
+      <div class="code-section">
+        <h3>CSS</h3>
+        <pre><code id="cssCode"></code></pre>
+      </div>
+      <div class="code-section">
+        <h3>JavaScript (if needed)</h3>
+        <pre><code id="jsCode"></code></pre>
+      </div>
+    </div>
   </div>
 
   <script>
@@ -2643,6 +2714,12 @@
     const sizeValueSpan = document.getElementById("sizeValue");
     const startBtn = document.getElementById("startBtn");
     const hideLoaderBtn = document.getElementById("hideLoaderBtn");
+    const exportCodeBtn = document.getElementById("exportCodeBtn");
+    const codeModal = document.getElementById("codeModal");
+    const closeModalSpan = codeModal.querySelector(".close-button");
+    const htmlCodeBlock = document.getElementById("htmlCode");
+    const cssCodeBlock = document.getElementById("cssCode");
+    const jsCodeBlock = document.getElementById("jsCode");
 
 
     function populateLoaderOptions() {
@@ -2817,6 +2894,52 @@
         });
     });
 
+    // Event listener for Export Code button
+    exportCodeBtn.onclick = function() {
+        const selectedLoaderKey = presetSelect.value;
+        const loaderHtmlString = loaderHTML[selectedLoaderKey];
+        
+        // Display HTML (escape for safety)
+        htmlCodeBlock.textContent = loaderHtmlString;
+        
+        // Placeholder for CSS and JS extraction (will implement later)
+        cssCodeBlock.textContent = "// CSS for this loader is in the <style> block or style.css";
+        jsCodeBlock.textContent = "// JavaScript is in the <script> block or script.js";
+        
+        codeModal.style.display = "block";
+    };
+
+    // Event listener for modal close button
+    closeModalSpan.onclick = function() {
+        codeModal.style.display = "none";
+    };
+
+    // Event listener to close modal when clicking outside of it
+    window.onclick = function(event) {
+        if (event.target == codeModal) {
+            codeModal.style.display = "none";
+        }
+    };
+
+    // Initial population of options
+    populateLoaderOptions();
+
+    // Apply default settings on load
+    applyLoaderSettings();
+
+    // Event listeners for controls
+    colorPicker.addEventListener("input", () => {
+        if (loaderOverlay.style.display === "flex") applyLoaderSettings();
+    });
+    sizeSlider.addEventListener("input", () => {
+        updateSizeValueText();
+        if (loaderOverlay.style.display === "flex") applyLoaderSettings();
+    });
+    presetSelect.addEventListener("change", () => {
+        if (loaderOverlay.style.display === "flex") {
+            showSelectedLoader();
+        }
+    });
   </script>
 
 </body>
