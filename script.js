@@ -274,6 +274,8 @@
                 <div class="dot"></div>
                 <div class="dot"></div>
                 <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
             </div>`,
       "174-pixel-sort-abstract": `<div class="loader-pixel-sort-abstract">
                 <div class="pixel-line"></div>
@@ -384,7 +386,6 @@
                 <div class="connection"></div>
             </div>`,
       "188-digital-glitch-grid": `<div class="loader-digital-glitch-grid">
-                <div class="glitch-pixel"></div>
                 <div class="glitch-pixel"></div>
                 <div class="glitch-pixel"></div>
                 <div class="glitch-pixel"></div>
@@ -604,6 +605,155 @@
       startScreen.style.display = "flex";
     }
 
+    // Function to extract CSS for a specific loader
+    function extractLoaderCSS(loaderKey) {
+        // Extract the loader class name from the key
+        const className = loaderKey.replace(/^\d+-/, 'loader-');
+        
+        let extractedCSS = `/* CSS for ${loaderKey} */\n\n`;
+        let foundRules = false;
+        
+        try {
+            // Try to extract from stylesheets
+            const allStylesheets = document.styleSheets;
+            for (let i = 0; i < allStylesheets.length; i++) {
+                const stylesheet = allStylesheets[i];
+                if (stylesheet.cssRules) {
+                    for (let j = 0; j < stylesheet.cssRules.length; j++) {
+                        const rule = stylesheet.cssRules[j];
+                        if (rule.selectorText && rule.selectorText.includes(className)) {
+                            extractedCSS += rule.cssText + '\n\n';
+                            foundRules = true;
+                        }
+                    }
+                }
+            }
+        } catch (e) {
+            // CORS blocked - provide helpful fallback
+            foundRules = false;
+        }
+        
+        if (!foundRules) {
+            // Provide comprehensive fallback with instructions
+            extractedCSS += `/* ⚠️  Direct CSS extraction blocked by browser security */\n`;
+            extractedCSS += `/* 📁 Find the complete CSS in style.css file */\n`;
+            extractedCSS += `/* 🔍 Search for: .${className} */\n\n`;
+            
+            extractedCSS += `/* Basic structure for this loader: */\n\n`;
+            extractedCSS += `.${className} {\n`;
+            extractedCSS += `    width: 50px;\n`;
+            extractedCSS += `    height: 50px;\n`;
+            extractedCSS += `    position: relative;\n`;
+            extractedCSS += `    /* Add specific styling properties */\n`;
+            extractedCSS += `    animation: ${className.replace('loader-', '')}-anim 2s infinite ease-in-out;\n`;
+            extractedCSS += `}\n\n`;
+            
+            // Add child elements if they exist in the HTML
+            const htmlString = loaderHTML[loaderKey];
+            if (htmlString.includes('div class=') || htmlString.includes('<div>')) {
+                extractedCSS += `/* Child element styles */\n`;
+                extractedCSS += `.${className} div {\n`;
+                extractedCSS += `    /* Styling for child elements */\n`;
+                extractedCSS += `    background: var(--loader-color, #333);\n`;
+                extractedCSS += `}\n\n`;
+            }
+            
+            extractedCSS += `/* Animation keyframes */\n`;
+            extractedCSS += `@keyframes ${className.replace('loader-', '')}-anim {\n`;
+            extractedCSS += `    0% {\n`;
+            extractedCSS += `        /* Initial state */\n`;
+            extractedCSS += `        transform: rotate(0deg);\n`;
+            extractedCSS += `    }\n`;
+            extractedCSS += `    100% {\n`;
+            extractedCSS += `        /* Final state */\n`;
+            extractedCSS += `        transform: rotate(360deg);\n`;
+            extractedCSS += `    }\n`;
+            extractedCSS += `}\n\n`;
+            
+            extractedCSS += `/* 🎨 Color theming support */\n`;
+            extractedCSS += `/* Use: --loader-color CSS variable for easy theming */\n`;
+            extractedCSS += `/* Example: .${className} { --loader-color: #ff6b6b; } */`;
+        }
+        
+        return extractedCSS;
+    }
+
+    // Function to extract JavaScript for a specific loader
+    function extractLoaderJS(loaderKey) {
+        let jsCode = `/* JavaScript for ${loaderKey} */\n\n`;
+        
+        jsCode += `/* 📋 HTML Definition */\n`;
+        jsCode += `const loaderHTML = {\n`;
+        jsCode += `    "${loaderKey}": \`${loaderHTML[loaderKey]}\`\n`;
+        jsCode += `};\n\n`;
+        
+        jsCode += `/* 🚀 Quick Setup Function */\n`;
+        jsCode += `function createLoader() {\n`;
+        jsCode += `    const container = document.createElement('div');\n`;
+        jsCode += `    container.innerHTML = loaderHTML["${loaderKey}"];\n`;
+        jsCode += `    \n`;
+        jsCode += `    // Apply default styling\n`;
+        jsCode += `    const loader = container.firstElementChild;\n`;
+        jsCode += `    loader.style.setProperty('--loader-color', '#333');\n`;
+        jsCode += `    \n`;
+        jsCode += `    return loader;\n`;
+        jsCode += `}\n\n`;
+        
+        jsCode += `/* 🎨 Color Theming Function */\n`;
+        jsCode += `function setLoaderColor(loaderElement, color) {\n`;
+        jsCode += `    loaderElement.style.setProperty('--loader-color', color);\n`;
+        jsCode += `}\n\n`;
+        
+        jsCode += `/* 📏 Size Scaling Function */\n`;
+        jsCode += `function setLoaderSize(loaderElement, scale = 1) {\n`;
+        jsCode += `    loaderElement.style.transform = \`scale(\${scale})\`;\n`;
+        jsCode += `}\n\n`;
+        
+        jsCode += `/* 💡 Usage Examples */\n\n`;
+        jsCode += `// Example 1: Add to existing container\n`;
+        jsCode += `const container = document.getElementById('loader-container');\n`;
+        jsCode += `container.innerHTML = loaderHTML["${loaderKey}"];\n\n`;
+        
+        jsCode += `// Example 2: Create and customize\n`;
+        jsCode += `const myLoader = createLoader();\n`;
+        jsCode += `setLoaderColor(myLoader, '#ff6b6b');\n`;
+        jsCode += `setLoaderSize(myLoader, 1.5);\n`;
+        jsCode += `document.body.appendChild(myLoader);\n\n`;
+        
+        jsCode += `// Example 3: Show/Hide with animation\n`;
+        jsCode += `function showLoader(containerId) {\n`;
+        jsCode += `    const container = document.getElementById(containerId);\n`;
+        jsCode += `    container.innerHTML = loaderHTML["${loaderKey}"];\n`;
+        jsCode += `    container.style.display = 'flex';\n`;
+        jsCode += `}\n\n`;
+        
+        jsCode += `function hideLoader(containerId) {\n`;
+        jsCode += `    const container = document.getElementById(containerId);\n`;
+        jsCode += `    container.style.display = 'none';\n`;
+        jsCode += `    container.innerHTML = '';\n`;
+        jsCode += `}\n\n`;
+        
+        jsCode += `/* 📱 Responsive Integration */\n`;
+        jsCode += `// Add this CSS for responsive behavior:\n`;
+        jsCode += `/*\n`;
+        jsCode += `.loader-container {\n`;
+        jsCode += `    display: flex;\n`;
+        jsCode += `    justify-content: center;\n`;
+        jsCode += `    align-items: center;\n`;
+        jsCode += `    min-height: 100px;\n`;
+        jsCode += `}\n`;
+        jsCode += `*/\n\n`;
+        
+        jsCode += `/* 🎯 Required HTML Structure */\n`;
+        jsCode += `/*\n`;
+        jsCode += `<div id="loader-container" class="loader-container">\n`;
+        jsCode += `    <!-- Loader will be inserted here -->\n`;
+        jsCode += `</div>\n`;
+        jsCode += `*/`;
+        
+        return jsCode;
+    }
+
     document.addEventListener('DOMContentLoaded', () => {
         populateLoaderOptions();
         updateSizeValueText();
@@ -639,17 +789,21 @@
                 const selectedLoaderKey = presetSelect.value;
                 const loaderHtmlString = loaderHTML[selectedLoaderKey];
                 
-                // Display HTML (escape for safety)
+                // Display HTML
                 if (htmlCodeBlock) {
                     htmlCodeBlock.textContent = loaderHtmlString;
                 }
                 
-                // Placeholder for CSS and JS extraction (will implement later)
+                // Extract and display CSS
                 if (cssCodeBlock) {
-                    cssCodeBlock.textContent = "// CSS for this loader is in the style.css file";
+                    const cssCode = extractLoaderCSS(selectedLoaderKey);
+                    cssCodeBlock.textContent = cssCode;
                 }
+                
+                // Display JavaScript
                 if (jsCodeBlock) {
-                    jsCodeBlock.textContent = "// JavaScript is in the script.js file";
+                    const jsCode = extractLoaderJS(selectedLoaderKey);
+                    jsCodeBlock.textContent = jsCode;
                 }
                 
                 if (codeModal) {
