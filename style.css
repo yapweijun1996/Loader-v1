@@ -2395,3 +2395,449 @@ button:hover {
         opacity: 1; 
     } 
 }
+
+/* 161. Tree Branch Growth */
+.loader-tree-branch-growth { 
+    width: 60px; 
+    height: 60px; 
+    position: relative; 
+}
+.loader-tree-branch-growth .branch { 
+    position: absolute; 
+    bottom: 0; 
+    left: 50%; 
+    width: 2px; 
+    background: var(--loader-color, #333); 
+    transform-origin: bottom center; 
+    animation: tree-branch-growth-grow 3s infinite ease-out; 
+}
+.loader-tree-branch-growth .branch:nth-child(1) { 
+    height: 30px; 
+    animation-delay: 0s; 
+}
+.loader-tree-branch-growth .branch:nth-child(2) { 
+    height: 20px; 
+    transform: translateX(-1px) rotate(25deg); 
+    animation-delay: 1s; 
+}
+.loader-tree-branch-growth .branch:nth-child(3) { 
+    height: 20px; 
+    transform: translateX(1px) rotate(-25deg); 
+    animation-delay: 1.5s; 
+}
+.loader-tree-branch-growth .branch:nth-child(4) { 
+    height: 15px; 
+    transform: translateX(-1px) rotate(45deg); 
+    animation-delay: 2s; 
+}
+@keyframes tree-branch-growth-grow { 
+    0% { transform: scaleY(0); opacity: 0; } 
+    30% { transform: scaleY(1); opacity: 1; } 
+    100% { transform: scaleY(1); opacity: 1; } 
+}
+
+/* 162. Water Ripple Pool */
+.loader-water-ripple-pool { 
+    width: 60px; 
+    height: 60px; 
+    position: relative; 
+    border-radius: 50%; 
+    background: rgba(0, 150, 255, 0.1); 
+}
+.loader-water-ripple-pool .ripple { 
+    position: absolute; 
+    top: 50%; 
+    left: 50%; 
+    width: 8px; 
+    height: 8px; 
+    border: 2px solid var(--loader-color, #333); 
+    border-radius: 50%; 
+    transform: translate(-50%, -50%); 
+    animation: water-ripple-pool-expand 2s infinite ease-out; 
+}
+.loader-water-ripple-pool .ripple:nth-child(1) { animation-delay: 0s; }
+.loader-water-ripple-pool .ripple:nth-child(2) { animation-delay: 0.5s; }
+.loader-water-ripple-pool .ripple:nth-child(3) { animation-delay: 1s; }
+.loader-water-ripple-pool .ripple:nth-child(4) { animation-delay: 1.5s; }
+@keyframes water-ripple-pool-expand { 
+    0% { width: 8px; height: 8px; opacity: 1; } 
+    70% { width: 50px; height: 50px; opacity: 0.3; } 
+    100% { width: 60px; height: 60px; opacity: 0; } 
+}
+
+/* 163. Lightning Strike Flash */
+.loader-lightning-strike-flash { 
+    width: 60px; 
+    height: 60px; 
+    position: relative; 
+    background: rgba(0, 0, 0, 0.05); 
+}
+.loader-lightning-strike-flash .lightning { 
+    position: absolute; 
+    top: 10%; 
+    left: 45%; 
+    width: 3px; 
+    height: 80%; 
+    background: var(--loader-color, #333); 
+    transform: skew(-15deg); 
+    opacity: 0; 
+    animation: lightning-strike-flash-bolt 3s infinite ease-in-out; 
+}
+.loader-lightning-strike-flash .lightning:before { 
+    content: ''; 
+    position: absolute; 
+    top: 30%; 
+    right: -2px; 
+    width: 2px; 
+    height: 20%; 
+    background: var(--loader-color, #333); 
+    transform: skew(30deg); 
+}
+.loader-lightning-strike-flash .lightning:after { 
+    content: ''; 
+    position: absolute; 
+    top: 60%; 
+    left: -2px; 
+    width: 2px; 
+    height: 15%; 
+    background: var(--loader-color, #333); 
+    transform: skew(-30deg); 
+}
+@keyframes lightning-strike-flash-bolt { 
+    0%, 85% { opacity: 0; transform: skew(-15deg) scale(1); } 
+    87% { opacity: 1; transform: skew(-15deg) scale(1.2); } 
+    89% { opacity: 0; transform: skew(-15deg) scale(1); } 
+    91% { opacity: 1; transform: skew(-15deg) scale(1.1); } 
+    93% { opacity: 0; transform: skew(-15deg) scale(1); } 
+    100% { opacity: 0; transform: skew(-15deg) scale(1); } 
+}
+
+/* 164. Flower Bloom Open */
+.loader-flower-bloom-open { 
+    width: 60px; 
+    height: 60px; 
+    position: relative; 
+}
+.loader-flower-bloom-open .petal { 
+    position: absolute; 
+    top: 50%; 
+    left: 50%; 
+    width: 20px; 
+    height: 8px; 
+    background: var(--loader-color, #333); 
+    border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%; 
+    transform-origin: 0 50%; 
+    animation: flower-bloom-open-unfold 3s infinite ease-in-out; 
+}
+.loader-flower-bloom-open .petal:nth-child(1) { transform: translate(-50%, -50%) rotate(0deg); animation-delay: 0s; }
+.loader-flower-bloom-open .petal:nth-child(2) { transform: translate(-50%, -50%) rotate(60deg); animation-delay: 0.2s; }
+.loader-flower-bloom-open .petal:nth-child(3) { transform: translate(-50%, -50%) rotate(120deg); animation-delay: 0.4s; }
+.loader-flower-bloom-open .petal:nth-child(4) { transform: translate(-50%, -50%) rotate(180deg); animation-delay: 0.6s; }
+.loader-flower-bloom-open .petal:nth-child(5) { transform: translate(-50%, -50%) rotate(240deg); animation-delay: 0.8s; }
+.loader-flower-bloom-open .petal:nth-child(6) { transform: translate(-50%, -50%) rotate(300deg); animation-delay: 1s; }
+.loader-flower-bloom-open:after { 
+    content: ''; 
+    position: absolute; 
+    top: 50%; 
+    left: 50%; 
+    width: 8px; 
+    height: 8px; 
+    background: var(--loader-color, #333); 
+    border-radius: 50%; 
+    transform: translate(-50%, -50%); 
+}
+@keyframes flower-bloom-open-unfold { 
+    0% { transform: translate(-50%, -50%) scale(0) rotate(var(--rotate, 0deg)); opacity: 0; } 
+    30% { transform: translate(-50%, -50%) scale(1) rotate(var(--rotate, 0deg)); opacity: 1; } 
+    70% { transform: translate(-50%, -50%) scale(1) rotate(var(--rotate, 0deg)); opacity: 1; } 
+    100% { transform: translate(-50%, -50%) scale(0) rotate(var(--rotate, 0deg)); opacity: 0; } 
+}
+
+/* 165. Spiral Galaxy Arm */
+.loader-spiral-galaxy-arm { 
+    width: 60px; 
+    height: 60px; 
+    position: relative; 
+    animation: spiral-galaxy-arm-rotate 4s linear infinite; 
+}
+.loader-spiral-galaxy-arm .arm { 
+    position: absolute; 
+    top: 50%; 
+    left: 50%; 
+    width: 2px; 
+    height: 25px; 
+    background: linear-gradient(to top, transparent, var(--loader-color, #333)); 
+    transform-origin: bottom center; 
+    animation: spiral-galaxy-arm-sweep 4s linear infinite; 
+}
+.loader-spiral-galaxy-arm .arm:nth-child(1) { transform: translate(-1px, -25px) rotate(0deg); animation-delay: 0s; }
+.loader-spiral-galaxy-arm .arm:nth-child(2) { transform: translate(-1px, -25px) rotate(90deg); animation-delay: -1s; }
+.loader-spiral-galaxy-arm .arm:nth-child(3) { transform: translate(-1px, -25px) rotate(180deg); animation-delay: -2s; }
+.loader-spiral-galaxy-arm .arm:nth-child(4) { transform: translate(-1px, -25px) rotate(270deg); animation-delay: -3s; }
+@keyframes spiral-galaxy-arm-rotate { 
+    0% { transform: rotate(0deg); } 
+    100% { transform: rotate(360deg); } 
+}
+@keyframes spiral-galaxy-arm-sweep { 
+    0% { opacity: 1; height: 25px; } 
+    50% { opacity: 0.5; height: 30px; } 
+    100% { opacity: 1; height: 25px; } 
+}
+
+/* 166. Leaf Fall Animation */
+.loader-leaf-fall-animation { 
+    width: 60px; 
+    height: 60px; 
+    position: relative; 
+    overflow: hidden; 
+}
+.loader-leaf-fall-animation .leaf { 
+    position: absolute; 
+    width: 8px; 
+    height: 12px; 
+    background: var(--loader-color, #333); 
+    border-radius: 0 100% 0 100%; 
+    animation: leaf-fall-animation-drop 3s infinite ease-in; 
+}
+.loader-leaf-fall-animation .leaf:nth-child(1) { 
+    left: 20%; 
+    animation-delay: 0s; 
+    animation-duration: 3s; 
+}
+.loader-leaf-fall-animation .leaf:nth-child(2) { 
+    left: 50%; 
+    animation-delay: 0.8s; 
+    animation-duration: 2.5s; 
+}
+.loader-leaf-fall-animation .leaf:nth-child(3) { 
+    left: 80%; 
+    animation-delay: 1.5s; 
+    animation-duration: 3.2s; 
+}
+@keyframes leaf-fall-animation-drop { 
+    0% { 
+        transform: translateY(-10px) rotate(0deg); 
+        opacity: 1; 
+    } 
+    25% { 
+        transform: translateY(15px) translateX(10px) rotate(90deg); 
+        opacity: 0.8; 
+    } 
+    50% { 
+        transform: translateY(30px) translateX(-5px) rotate(180deg); 
+        opacity: 0.6; 
+    } 
+    75% { 
+        transform: translateY(45px) translateX(8px) rotate(270deg); 
+        opacity: 0.4; 
+    } 
+    100% { 
+        transform: translateY(70px) translateX(-3px) rotate(360deg); 
+        opacity: 0; 
+    } 
+}
+
+/* 167. Ocean Wave Crest */
+.loader-ocean-wave-crest { 
+    width: 60px; 
+    height: 60px; 
+    position: relative; 
+    overflow: hidden; 
+}
+.loader-ocean-wave-crest .wave { 
+    position: absolute; 
+    bottom: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 20px; 
+    background: var(--loader-color, #333); 
+    border-radius: 50% 50% 0 0; 
+    animation: ocean-wave-crest-flow 2s infinite ease-in-out; 
+}
+.loader-ocean-wave-crest .wave:nth-child(1) { animation-delay: 0s; }
+.loader-ocean-wave-crest .wave:nth-child(2) { 
+    height: 15px; 
+    opacity: 0.7; 
+    animation-delay: 0.3s; 
+}
+.loader-ocean-wave-crest .wave:nth-child(3) { 
+    height: 10px; 
+    opacity: 0.4; 
+    animation-delay: 0.6s; 
+}
+@keyframes ocean-wave-crest-flow { 
+    0%, 100% { 
+        transform: translateX(-20px) scaleY(1); 
+        border-radius: 50% 50% 0 0; 
+    } 
+    50% { 
+        transform: translateX(20px) scaleY(1.3); 
+        border-radius: 30% 70% 0 0; 
+    } 
+}
+
+/* 168. Fire Flame Flicker */
+.loader-fire-flame-flicker { 
+    width: 60px; 
+    height: 60px; 
+    position: relative; 
+}
+.loader-fire-flame-flicker .flame { 
+    position: absolute; 
+    bottom: 10px; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    width: 20px; 
+    height: 40px; 
+    background: radial-gradient(ellipse at bottom, var(--loader-color, #333) 0%, transparent 70%); 
+    border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%; 
+    animation: fire-flame-flicker-dance 1.5s infinite ease-in-out; 
+}
+.loader-fire-flame-flicker .flame:nth-child(1) { 
+    animation-delay: 0s; 
+    z-index: 3; 
+}
+.loader-fire-flame-flicker .flame:nth-child(2) { 
+    width: 15px; 
+    height: 30px; 
+    opacity: 0.7; 
+    animation-delay: 0.2s; 
+    z-index: 2; 
+}
+.loader-fire-flame-flicker .flame:nth-child(3) { 
+    width: 12px; 
+    height: 25px; 
+    opacity: 0.5; 
+    animation-delay: 0.4s; 
+    z-index: 1; 
+}
+@keyframes fire-flame-flicker-dance { 
+    0%, 100% { 
+        transform: translateX(-50%) scale(1) rotate(0deg); 
+        border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%; 
+    } 
+    25% { 
+        transform: translateX(-50%) scale(1.1) rotate(-2deg); 
+        border-radius: 45% 55% 50% 50% / 65% 60% 40% 35%; 
+    } 
+    50% { 
+        transform: translateX(-50%) scale(0.9) rotate(1deg); 
+        border-radius: 55% 45% 50% 50% / 55% 65% 35% 45%; 
+    } 
+    75% { 
+        transform: translateX(-50%) scale(1.05) rotate(-1deg); 
+        border-radius: 50% 50% 55% 45% / 60% 55% 45% 40%; 
+    } 
+}
+
+/* 169. Cloud Formation */
+.loader-cloud-formation { 
+    width: 60px; 
+    height: 60px; 
+    position: relative; 
+}
+.loader-cloud-formation .cloud-part { 
+    position: absolute; 
+    background: var(--loader-color, #333); 
+    border-radius: 50%; 
+    animation: cloud-formation-grow 3s infinite ease-in-out; 
+}
+.loader-cloud-formation .cloud-part:nth-child(1) { 
+    top: 35%; 
+    left: 25%; 
+    width: 20px; 
+    height: 20px; 
+    animation-delay: 0s; 
+}
+.loader-cloud-formation .cloud-part:nth-child(2) { 
+    top: 30%; 
+    left: 40%; 
+    width: 15px; 
+    height: 15px; 
+    animation-delay: 0.5s; 
+}
+.loader-cloud-formation .cloud-part:nth-child(3) { 
+    top: 40%; 
+    left: 50%; 
+    width: 18px; 
+    height: 18px; 
+    animation-delay: 1s; 
+}
+.loader-cloud-formation .cloud-part:nth-child(4) { 
+    top: 45%; 
+    left: 15%; 
+    width: 12px; 
+    height: 12px; 
+    animation-delay: 1.5s; 
+}
+@keyframes cloud-formation-grow { 
+    0% { transform: scale(0); opacity: 0; } 
+    30% { transform: scale(1); opacity: 0.8; } 
+    70% { transform: scale(1); opacity: 0.8; } 
+    100% { transform: scale(1.2); opacity: 0; } 
+}
+
+/* 170. Snowflake Descent */
+.loader-snowflake-descent { 
+    width: 60px; 
+    height: 60px; 
+    position: relative; 
+    overflow: hidden; 
+}
+.loader-snowflake-descent .snowflake { 
+    position: absolute; 
+    color: var(--loader-color, #333); 
+    font-size: 12px; 
+    animation: snowflake-descent-fall 4s infinite linear; 
+}
+.loader-snowflake-descent .snowflake:nth-child(1) { 
+    left: 10%; 
+    animation-delay: 0s; 
+    animation-duration: 3s; 
+}
+.loader-snowflake-descent .snowflake:nth-child(2) { 
+    left: 30%; 
+    animation-delay: 0.5s; 
+    animation-duration: 4s; 
+}
+.loader-snowflake-descent .snowflake:nth-child(3) { 
+    left: 50%; 
+    animation-delay: 1s; 
+    animation-duration: 3.5s; 
+}
+.loader-snowflake-descent .snowflake:nth-child(4) { 
+    left: 70%; 
+    animation-delay: 1.5s; 
+    animation-duration: 4.2s; 
+}
+.loader-snowflake-descent .snowflake:nth-child(5) { 
+    left: 90%; 
+    animation-delay: 2s; 
+    animation-duration: 3.8s; 
+}
+@keyframes snowflake-descent-fall { 
+    0% { 
+        transform: translateY(-10px) rotate(0deg); 
+        opacity: 1; 
+    } 
+    20% { 
+        transform: translateY(12px) translateX(5px) rotate(72deg); 
+        opacity: 1; 
+    } 
+    40% { 
+        transform: translateY(24px) translateX(-3px) rotate(144deg); 
+        opacity: 0.8; 
+    } 
+    60% { 
+        transform: translateY(36px) translateX(7px) rotate(216deg); 
+        opacity: 0.6; 
+    } 
+    80% { 
+        transform: translateY(48px) translateX(-2px) rotate(288deg); 
+        opacity: 0.4; 
+    } 
+    100% { 
+        transform: translateY(70px) translateX(4px) rotate(360deg); 
+        opacity: 0; 
+    } 
+}

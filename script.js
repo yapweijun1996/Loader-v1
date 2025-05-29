@@ -178,18 +178,63 @@
       "160-glitch-text-effect": `<div class="loader-glitch-text-effect"></div>`,
 
       // --- Nature & Organic Loaders (161-170) - TO BE IMPLEMENTED ---
-      "161-tree-branch-growth": `<div class="loader-placeholder"><div>161. Tree Branch Growth (Implement Me)</div></div>`,
-      "162-water-ripple-pool": `<div class="loader-placeholder"><div>162. Water Ripple Pool (Implement Me)</div></div>`,
-
-      // --- Placeholder Loaders (171-200) - TO BE IMPLEMENTED ---
-      "163-dot-wave-2d": `<div class="loader-placeholder"><div>163. Dot Wave 2D (Implement Me)</div></div>`,
-      "164-pixel-sort-abstract": `<div class="loader-placeholder"><div>164. Pixel Sort (Abstract) (Implement Me)</div></div>`,
-      "165-molecular-dots": `<div class="loader-placeholder"><div>165. Molecular Dots (Implement Me)</div></div>`,
-      "166-tesseract-fold-2d-projection": `<div class="loader-placeholder"><div>166. Tesseract Fold (2D Projection) (Implement Me)</div></div>`,
-      "167-mondrian-blocks": `<div class="loader-placeholder"><div>167. Mondrian Blocks (Implement Me)</div></div>`,
-      "168-kaleidoscope-effect": `<div class="loader-placeholder"><div>168. Kaleidoscope Effect (Implement Me)</div></div>`,
-      "169-impossible-triangle-illusion": `<div class="loader-placeholder"><div>169. Impossible Triangle Illusion (Implement Me)</div></div>`,
-      "170-morphing-shapes": `<div class="loader-placeholder"><div>170. Morphing Shapes (Implement Me)</div></div>`,
+      "161-tree-branch-growth": `<div class="loader-tree-branch-growth">
+                <div class="branch"></div>
+                <div class="branch"></div>
+                <div class="branch"></div>
+                <div class="branch"></div>
+            </div>`,
+      "162-water-ripple-pool": `<div class="loader-water-ripple-pool">
+                <div class="ripple"></div>
+                <div class="ripple"></div>
+                <div class="ripple"></div>
+                <div class="ripple"></div>
+            </div>`,
+      "163-lightning-strike-flash": `<div class="loader-lightning-strike-flash">
+                <div class="lightning"></div>
+            </div>`,
+      "164-flower-bloom-open": `<div class="loader-flower-bloom-open">
+                <div class="petal"></div>
+                <div class="petal"></div>
+                <div class="petal"></div>
+                <div class="petal"></div>
+                <div class="petal"></div>
+                <div class="petal"></div>
+            </div>`,
+      "165-spiral-galaxy-arm": `<div class="loader-spiral-galaxy-arm">
+                <div class="arm"></div>
+                <div class="arm"></div>
+                <div class="arm"></div>
+                <div class="arm"></div>
+            </div>`,
+      "166-leaf-fall-animation": `<div class="loader-leaf-fall-animation">
+                <div class="leaf"></div>
+                <div class="leaf"></div>
+                <div class="leaf"></div>
+            </div>`,
+      "167-ocean-wave-crest": `<div class="loader-ocean-wave-crest">
+                <div class="wave"></div>
+                <div class="wave"></div>
+                <div class="wave"></div>
+            </div>`,
+      "168-fire-flame-flicker": `<div class="loader-fire-flame-flicker">
+                <div class="flame"></div>
+                <div class="flame"></div>
+                <div class="flame"></div>
+            </div>`,
+      "169-cloud-formation": `<div class="loader-cloud-formation">
+                <div class="cloud-part"></div>
+                <div class="cloud-part"></div>
+                <div class="cloud-part"></div>
+                <div class="cloud-part"></div>
+            </div>`,
+      "170-snowflake-descent": `<div class="loader-snowflake-descent">
+                <div class="snowflake">❄</div>
+                <div class="snowflake">❅</div>
+                <div class="snowflake">❆</div>
+                <div class="snowflake">❄</div>
+                <div class="snowflake">❅</div>
+            </div>`,
       "171-bauhaus-circles-squares": `<div class="loader-placeholder"><div>171. Bauhaus Circles & Squares (Implement Me)</div></div>`,
       "172-chevron-flow": `<div class="loader-placeholder"><div>172. Chevron Flow (Implement Me)</div></div>`,
       "173-abstract-line-art": `<div class="loader-placeholder"><div>173. Abstract Line Art (Implement Me)</div></div>`,
