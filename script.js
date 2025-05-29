@@ -328,26 +328,121 @@
       "180-morphing-shapes": `<div class="loader-morphing-shapes">
                 <div class="shape"></div>
             </div>`,
-      "181-matrix-code-rain": `<div class="loader-placeholder"><div>181. Matrix Code Rain (Implement Me)</div></div>`,
-      "182-fading-letters-in-out": `<div class="loader-placeholder"><div>182. Fading Letters In/Out (Implement Me)</div></div>`,
-      "183-text-to-dots-transition": `<div class="loader-placeholder"><div>183. Text to Dots Transition (Implement Me)</div></div>`,
-      "184-code-block-typing": `<div class="loader-placeholder"><div>184. Code Block Typing (Implement Me)</div></div>`,
-      "185-ascii-art-animation": `<div class="loader-placeholder"><div>185. ASCII Art Animation (Implement Me)</div></div>`,
-      "186-coffee-cup-steam": `<div class="loader-placeholder"><div>186. Coffee Cup Steam (Implement Me)</div></div>`,
-      "187-paper-plane-flight": `<div class="loader-placeholder"><div>187. Paper Plane Flight (Implement Me)</div></div>`,
-      "188-light-bulb-flicker": `<div class="loader-placeholder"><div>188. Light Bulb Flicker (Implement Me)</div></div>`,
-      "189-hourglass-flip-icon": `<div class="loader-placeholder"><div>189. Hourglass Flip (Icon) (Implement Me)</div></div>`,
-      "190-magnifying-glass-scan": `<div class="loader-placeholder"><div>190. Magnifying Glass Scan (Implement Me)</div></div>`,
-      "191-unlocking-padlock": `<div class="loader-placeholder"><div>191. Unlocking Padlock (Implement Me)</div></div>`,
-      "192-water-drop-effect": `<div class="loader-placeholder"><div>192. Water Drop Effect (Implement Me)</div></div>`,
-      "193-growing-plant": `<div class="loader-placeholder"><div>193. Growing Plant (Implement Me)</div></div>`,
-      "194-cat-chasing-laser-pointer": `<div class="loader-placeholder"><div>194. Cat Chasing Laser Pointer (Implement Me)</div></div>`,
-      "195-minimalist-clock-hands": `<div class="loader-placeholder"><div>195. Minimalist Clock Hands (Implement Me)</div></div>`,
-      "196-moon-phase-cycle": `<div class="loader-placeholder"><div>196. Moon Phase Cycle (Implement Me)</div></div>`,
-      "197-shuffling-cards": `<div class="loader-placeholder"><div>197. Shuffling Cards (Implement Me)</div></div>`,
-      "198-connecting-nodes": `<div class="loader-placeholder"><div>198. Connecting Nodes (Implement Me)</div></div>`,
-      "199-glitch-effect-square": `<div class="loader-placeholder"><div>199. Glitch Effect Square (Implement Me)</div></div>`,
-      "200-infinity-loop-trace": `<div class="loader-placeholder"><div>200. Infinity Loop Trace (Implement Me)</div></div>`
+      "181-matrix-code-rain": `<div class="loader-matrix-code-rain">
+                <div class="code-stream">1<br>0<br>1<br>1<br>0</div>
+                <div class="code-stream">0<br>1<br>0<br>1<br>1</div>
+                <div class="code-stream">1<br>1<br>0<br>0<br>1</div>
+                <div class="code-stream">0<br>0<br>1<br>1<br>0</div>
+                <div class="code-stream">1<br>0<br>1<br>0<br>1</div>
+            </div>`,
+      "182-cyberpunk-grid": `<div class="loader-cyberpunk-grid">
+                <div class="grid-cell"></div>
+                <div class="grid-cell"></div>
+                <div class="grid-cell"></div>
+                <div class="grid-cell"></div>
+                <div class="grid-cell"></div>
+                <div class="grid-cell"></div>
+                <div class="grid-cell"></div>
+                <div class="grid-cell"></div>
+                <div class="grid-cell"></div>
+                <div class="grid-cell"></div>
+                <div class="grid-cell"></div>
+                <div class="grid-cell"></div>
+                <div class="grid-cell"></div>
+                <div class="grid-cell"></div>
+                <div class="grid-cell"></div>
+                <div class="grid-cell"></div>
+            </div>`,
+      "183-data-stream": `<div class="loader-data-stream">
+                <div class="data-packet"></div>
+                <div class="data-packet"></div>
+                <div class="data-packet"></div>
+                <div class="data-packet"></div>
+                <div class="data-packet"></div>
+            </div>`,
+      "184-virtual-reality-portal": `<div class="loader-virtual-reality-portal">
+                <div class="portal-ring"></div>
+                <div class="portal-ring"></div>
+                <div class="portal-ring"></div>
+                <div class="portal-ring"></div>
+            </div>`,
+      "185-quantum-interference": `<div class="loader-quantum-interference">
+                <div class="wave"></div>
+                <div class="wave"></div>
+                <div class="wave"></div>
+            </div>`,
+      "186-holographic-distortion": `<div class="loader-holographic-distortion">
+                <div class="holo-layer"></div>
+                <div class="holo-layer"></div>
+                <div class="holo-layer"></div>
+            </div>`,
+      "187-neural-pathway": `<div class="loader-neural-pathway">
+                <div class="neuron-node"></div>
+                <div class="neuron-node"></div>
+                <div class="neuron-node"></div>
+                <div class="connection"></div>
+                <div class="connection"></div>
+            </div>`,
+      "188-digital-glitch-grid": `<div class="loader-digital-glitch-grid">
+                <div class="glitch-pixel"></div>
+                <div class="glitch-pixel"></div>
+                <div class="glitch-pixel"></div>
+                <div class="glitch-pixel"></div>
+                <div class="glitch-pixel"></div>
+                <div class="glitch-pixel"></div>
+                <div class="glitch-pixel"></div>
+                <div class="glitch-pixel"></div>
+                <div class="glitch-pixel"></div>
+                <div class="glitch-pixel"></div>
+                <div class="glitch-pixel"></div>
+                <div class="glitch-pixel"></div>
+                <div class="glitch-pixel"></div>
+                <div class="glitch-pixel"></div>
+                <div class="glitch-pixel"></div>
+                <div class="glitch-pixel"></div>
+                <div class="glitch-pixel"></div>
+                <div class="glitch-pixel"></div>
+                <div class="glitch-pixel"></div>
+                <div class="glitch-pixel"></div>
+                <div class="glitch-pixel"></div>
+                <div class="glitch-pixel"></div>
+                <div class="glitch-pixel"></div>
+                <div class="glitch-pixel"></div>
+                <div class="glitch-pixel"></div>
+                <div class="glitch-pixel"></div>
+                <div class="glitch-pixel"></div>
+                <div class="glitch-pixel"></div>
+                <div class="glitch-pixel"></div>
+                <div class="glitch-pixel"></div>
+                <div class="glitch-pixel"></div>
+                <div class="glitch-pixel"></div>
+                <div class="glitch-pixel"></div>
+                <div class="glitch-pixel"></div>
+            </div>`,
+      "189-laser-maze": `<div class="loader-laser-maze">
+                <div class="laser-beam"></div>
+                <div class="laser-beam"></div>
+                <div class="laser-beam"></div>
+                <div class="laser-beam"></div>
+            </div>`,
+      "190-particle-accelerator": `<div class="loader-particle-accelerator">
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+            </div>`,
+      "191-infinity-symbol-flow": `<div class="loader-infinity-symbol-flow"><div class="infinity-path"></div></div>`,
+
+      // 192-200: Final placeholders
+      "192-phoenix-rising": `<div class="loader-phoenix-rising"><div class="phoenix-body"></div><div class="phoenix-wing"></div><div class="phoenix-wing"></div><div class="flame-trail"></div></div>`,
+      "193-mandala-expansion": `<div class="loader-mandala-expansion"><div class="mandala-ring"></div><div class="mandala-ring"></div><div class="mandala-ring"></div><div class="mandala-ring"></div></div>`,
+      "194-time-portal": `<div class="loader-time-portal"><div class="time-ring"></div><div class="time-ring"></div><div class="time-ring"></div><div class="time-ring"></div><div class="time-particles"></div><div class="time-particles"></div><div class="time-particles"></div><div class="time-particles"></div></div>`,
+      "195-crystal-formation": `<div class="loader-crystal-formation"><div class="crystal-facet"></div><div class="crystal-facet"></div><div class="crystal-facet"></div><div class="crystal-facet"></div><div class="crystal-core"></div></div>`,
+      "196-aurora-wave": `<div class="loader-aurora-wave"><div class="aurora-band"></div><div class="aurora-band"></div><div class="aurora-band"></div><div class="aurora-band"></div></div>`,
+      "197-cosmic-string": `<div class="loader-cosmic-string"><div class="string-segment"></div><div class="string-segment"></div><div class="string-segment"></div><div class="string-segment"></div><div class="string-segment"></div><div class="string-segment"></div><div class="string-segment"></div><div class="string-segment"></div><div class="string-segment"></div><div class="string-segment"></div><div class="string-segment"></div><div class="string-segment"></div></div>`,
+      "198-dimensional-rift": `<div class="loader-dimensional-rift"><div class="rift-layer"></div><div class="rift-layer"></div><div class="rift-layer"></div><div class="rift-layer"></div><div class="rift-energy"></div><div class="rift-energy"></div></div>`,
+      "199-energy-sphere": `<div class="loader-energy-sphere"><div class="sphere-core"></div><div class="energy-arc"></div><div class="energy-arc"></div><div class="energy-arc"></div><div class="energy-arc"></div><div class="energy-arc"></div></div>`,
+      "200-ultimate-spinner": `<div class="loader-ultimate-spinner"><div class="ultimate-ring"></div><div class="ultimate-ring"></div><div class="ultimate-ring"></div><div class="ultimate-core"></div><div class="ultimate-ray"></div><div class="ultimate-ray"></div><div class="ultimate-ray"></div><div class="ultimate-ray"></div></div>`
     };
 
     // Element references
