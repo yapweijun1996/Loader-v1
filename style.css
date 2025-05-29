@@ -1339,3 +1339,345 @@ button:hover {
 }
 
 /* 128. End of example new loaders */
+
+/* --- NEW LOADERS (126-200) --- */
+
+/* 126. Segmented Ring Fill */
+.loader-segmented-ring-fill { 
+    width: 50px; 
+    height: 50px; 
+    border-radius: 50%; 
+    background: conic-gradient(var(--loader-color, #333) 0deg, transparent 0deg); 
+    animation: segmented-ring-fill 2s linear infinite; 
+}
+@keyframes segmented-ring-fill { 
+    0% { background: conic-gradient(var(--loader-color, #333) 0deg, transparent 0deg); } 
+    25% { background: conic-gradient(var(--loader-color, #333) 90deg, transparent 90deg); } 
+    50% { background: conic-gradient(var(--loader-color, #333) 180deg, transparent 180deg); } 
+    75% { background: conic-gradient(var(--loader-color, #333) 270deg, transparent 270deg); } 
+    100% { background: conic-gradient(var(--loader-color, #333) 360deg, transparent 360deg); } 
+}
+
+/* 127. Hypno Wheel */
+.loader-hypno-wheel { 
+    width: 60px; 
+    height: 60px; 
+    border-radius: 50%; 
+    background: radial-gradient(circle at center, var(--loader-color, #333) 0%, transparent 30%, var(--loader-color, #333) 50%, transparent 70%, var(--loader-color, #333) 100%); 
+    animation: hypno-wheel-spin 1.5s linear infinite; 
+}
+@keyframes hypno-wheel-spin { 
+    0% { transform: rotate(0deg) scale(1); } 
+    50% { transform: rotate(180deg) scale(1.1); } 
+    100% { transform: rotate(360deg) scale(1); } 
+}
+
+/* 128. Gear System */
+.loader-gear-system { 
+    width: 60px; 
+    height: 60px; 
+    position: relative; 
+}
+.loader-gear-system:before, .loader-gear-system:after { 
+    content: ''; 
+    position: absolute; 
+    width: 30px; 
+    height: 30px; 
+    border: 3px solid var(--loader-color, #333); 
+    border-radius: 50%; 
+    background: repeating-conic-gradient(from 0deg, var(--loader-color, #333) 0deg 20deg, transparent 20deg 40deg); 
+}
+.loader-gear-system:before { 
+    top: 5px; 
+    left: 5px; 
+    animation: gear-rotate 2s linear infinite; 
+}
+.loader-gear-system:after { 
+    bottom: 5px; 
+    right: 5px; 
+    animation: gear-rotate-reverse 2s linear infinite; 
+}
+@keyframes gear-rotate { 
+    0% { transform: rotate(0deg); } 
+    100% { transform: rotate(360deg); } 
+}
+@keyframes gear-rotate-reverse { 
+    0% { transform: rotate(0deg); } 
+    100% { transform: rotate(-360deg); } 
+}
+
+/* 129. Hexagon Spinner */
+.loader-hexagon-spinner { 
+    width: 50px; 
+    height: 50px; 
+    background: var(--loader-color, #333); 
+    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%); 
+    animation: hexagon-spin 1.2s ease-in-out infinite; 
+}
+@keyframes hexagon-spin { 
+    0%, 100% { transform: rotate(0deg) scale(1); } 
+    50% { transform: rotate(180deg) scale(0.8); } 
+}
+
+/* 130. Cogwheel Turn */
+.loader-cogwheel-turn { 
+    width: 50px; 
+    height: 50px; 
+    background: var(--loader-color, #333); 
+    border-radius: 10%; 
+    position: relative; 
+    animation: cogwheel-turn-rotate 1.5s linear infinite; 
+}
+.loader-cogwheel-turn:before { 
+    content: ''; 
+    position: absolute; 
+    top: -5px; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    width: 6px; 
+    height: 10px; 
+    background: var(--loader-color, #333); 
+    box-shadow: 
+        0 60px 0 var(--loader-color, #333), 
+        -25px 30px 0 var(--loader-color, #333), 
+        25px 30px 0 var(--loader-color, #333), 
+        -43px 5px 0 var(--loader-color, #333), 
+        43px 5px 0 var(--loader-color, #333), 
+        -43px 55px 0 var(--loader-color, #333), 
+        43px 55px 0 var(--loader-color, #333); 
+}
+@keyframes cogwheel-turn-rotate { 
+    0% { transform: rotate(0deg); } 
+    100% { transform: rotate(360deg); } 
+}
+
+/* 131. Torus Knot Spin */
+.loader-torus-knot-spin { 
+    width: 60px; 
+    height: 60px; 
+    position: relative; 
+    animation: torus-knot-spin-rotate 3s linear infinite; 
+}
+.loader-torus-knot-spin:before { 
+    content: ''; 
+    position: absolute; 
+    width: 30px; 
+    height: 30px; 
+    border: 3px solid var(--loader-color, #333); 
+    border-radius: 50%; 
+    top: 15px; 
+    left: 0; 
+    animation: torus-knot-spin-orbit1 2s linear infinite; 
+}
+.loader-torus-knot-spin:after { 
+    content: ''; 
+    position: absolute; 
+    width: 30px; 
+    height: 30px; 
+    border: 3px solid var(--loader-color, #333); 
+    border-radius: 50%; 
+    top: 15px; 
+    right: 0; 
+    animation: torus-knot-spin-orbit2 2s linear infinite reverse; 
+}
+@keyframes torus-knot-spin-rotate { 
+    0% { transform: rotate(0deg); } 
+    100% { transform: rotate(360deg); } 
+}
+@keyframes torus-knot-spin-orbit1 { 
+    0% { transform: rotate(0deg) translateX(15px) rotate(0deg); } 
+    100% { transform: rotate(360deg) translateX(15px) rotate(-360deg); } 
+}
+@keyframes torus-knot-spin-orbit2 { 
+    0% { transform: rotate(0deg) translateX(-15px) rotate(0deg); } 
+    100% { transform: rotate(360deg) translateX(-15px) rotate(-360deg); } 
+}
+
+/* 132. Propeller Blur */
+.loader-propeller-blur { 
+    width: 60px; 
+    height: 60px; 
+    position: relative; 
+    animation: propeller-blur-spin 0.8s linear infinite; 
+}
+.loader-propeller-blur:before, .loader-propeller-blur:after { 
+    content: ''; 
+    position: absolute; 
+    width: 100%; 
+    height: 6px; 
+    background: var(--loader-color, #333); 
+    top: 50%; 
+    left: 0; 
+    transform-origin: 50% 50%; 
+    border-radius: 3px; 
+}
+.loader-propeller-blur:after { 
+    transform: rotate(90deg); 
+}
+@keyframes propeller-blur-spin { 
+    0% { transform: rotate(0deg); filter: blur(0px); } 
+    50% { filter: blur(2px); } 
+    100% { transform: rotate(360deg); filter: blur(0px); } 
+}
+
+/* 133. Galaxy Swirl */
+.loader-galaxy-swirl { 
+    width: 60px; 
+    height: 60px; 
+    border-radius: 50%; 
+    background: radial-gradient(circle at 30% 30%, var(--loader-color, #333) 2px, transparent 3px), 
+                radial-gradient(circle at 70% 70%, var(--loader-color, #333) 1px, transparent 2px), 
+                radial-gradient(circle at 20% 80%, var(--loader-color, #333) 1px, transparent 2px); 
+    animation: galaxy-swirl-rotate 3s linear infinite; 
+}
+@keyframes galaxy-swirl-rotate { 
+    0% { transform: rotate(0deg) scale(1); } 
+    50% { transform: rotate(180deg) scale(1.1); } 
+    100% { transform: rotate(360deg) scale(1); } 
+}
+
+/* 134. Spirograph Path */
+.loader-spirograph-path { 
+    width: 60px; 
+    height: 60px; 
+    position: relative; 
+}
+.loader-spirograph-path:before { 
+    content: ''; 
+    position: absolute; 
+    width: 8px; 
+    height: 8px; 
+    background: var(--loader-color, #333); 
+    border-radius: 50%; 
+    top: 50%; 
+    left: 50%; 
+    animation: spirograph-path-draw 2s linear infinite; 
+}
+@keyframes spirograph-path-draw { 
+    0% { transform: translate(-50%, -50%) rotate(0deg) translateX(20px) rotate(0deg); } 
+    100% { transform: translate(-50%, -50%) rotate(360deg) translateX(20px) rotate(-360deg); } 
+}
+
+/* 135. Broken Ring Spin */
+.loader-broken-ring-spin { 
+    width: 50px; 
+    height: 50px; 
+    border: 5px solid transparent; 
+    border-top-color: var(--loader-color, #333); 
+    border-right-color: var(--loader-color, #333); 
+    border-radius: 50%; 
+    animation: broken-ring-spin-rotate 1.2s linear infinite; 
+}
+@keyframes broken-ring-spin-rotate { 
+    0% { transform: rotate(0deg); } 
+    100% { transform: rotate(360deg); } 
+}
+
+/* 136. Heartbeat Pulse */
+.loader-heartbeat-pulse { 
+    width: 50px; 
+    height: 50px; 
+    background: var(--loader-color, #333); 
+    border-radius: 50%; 
+    animation: heartbeat-pulse-anim 1.5s infinite ease-in-out; 
+}
+@keyframes heartbeat-pulse-anim { 
+    0%, 100% { transform: scale(1); } 
+    10% { transform: scale(1.3); } 
+    20% { transform: scale(1); } 
+    30% { transform: scale(1.2); } 
+    40%, 90% { transform: scale(1); } 
+}
+
+/* 137. Sonar Ping */
+.loader-sonar-ping { 
+    width: 60px; 
+    height: 60px; 
+    position: relative; 
+}
+.loader-sonar-ping:before, .loader-sonar-ping:after { 
+    content: ''; 
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%; 
+    border: 2px solid var(--loader-color, #333); 
+    border-radius: 50%; 
+    animation: sonar-ping-expand 2s infinite ease-out; 
+}
+.loader-sonar-ping:after { 
+    animation-delay: -1s; 
+}
+@keyframes sonar-ping-expand { 
+    0% { transform: scale(0); opacity: 1; } 
+    100% { transform: scale(1); opacity: 0; } 
+}
+
+/* 138. Droplet Ripple */
+.loader-droplet-ripple { 
+    width: 50px; 
+    height: 50px; 
+    position: relative; 
+}
+.loader-droplet-ripple:before { 
+    content: ''; 
+    position: absolute; 
+    top: 50%; 
+    left: 50%; 
+    width: 8px; 
+    height: 8px; 
+    background: var(--loader-color, #333); 
+    border-radius: 50%; 
+    transform: translate(-50%, -50%); 
+}
+.loader-droplet-ripple:after { 
+    content: ''; 
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%; 
+    border: 2px solid var(--loader-color, #333); 
+    border-radius: 50%; 
+    animation: droplet-ripple-expand 1.5s infinite ease-out; 
+}
+@keyframes droplet-ripple-expand { 
+    0% { transform: scale(0); opacity: 1; } 
+    100% { transform: scale(1); opacity: 0; } 
+}
+
+/* 139. Breathing Square */
+.loader-breathing-square { 
+    width: 50px; 
+    height: 50px; 
+    background: var(--loader-color, #333); 
+    border-radius: 8px; 
+    animation: breathing-square-anim 2s infinite ease-in-out; 
+}
+@keyframes breathing-square-anim { 
+    0%, 100% { transform: scale(1); border-radius: 8px; } 
+    50% { transform: scale(1.2); border-radius: 50%; } 
+}
+
+/* 140. Cell Division */
+.loader-cell-division { 
+    width: 50px; 
+    height: 50px; 
+    position: relative; 
+}
+.loader-cell-division:before { 
+    content: ''; 
+    position: absolute; 
+    width: 100%; 
+    height: 100%; 
+    background: var(--loader-color, #333); 
+    border-radius: 50%; 
+    animation: cell-division-split 2s infinite ease-in-out; 
+}
+@keyframes cell-division-split { 
+    0%, 100% { transform: scale(1); } 
+    25% { transform: scale(1.2); } 
+    50% { transform: scale(1) scaleX(0.7); } 
+    75% { transform: scale(1); } 
+}

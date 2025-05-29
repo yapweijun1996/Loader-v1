@@ -134,12 +134,14 @@
       "124-yin-yang-spin": `<div class="loader-yin-yang-spin"><div class="dot1"></div><div class="dot2"></div></div>`,
       "125-sound-wave-bars-dynamic": `<div class="loader-sound-wave-bars-dynamic"><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>`,
 
-      // --- Placeholder Loaders (126-200) ---
-      "126-segmented-ring-fill": `<div class="loader-placeholder"><div>126. Segmented Ring Fill (Implement Me)</div></div>`,
-      "127-hypno-wheel": `<div class="loader-placeholder"><div>127. Hypno-Wheel (Implement Me)</div></div>`,
-      "128-gear-system": `<div class="loader-placeholder"><div>128. Gear System (Implement Me)</div></div>`,
-      "129-hexagon-spinner": `<div class="loader-placeholder"><div>129. Hexagon Spinner (Implement Me)</div></div>`,
-      "130-cogwheel-turn": `<div class="loader-placeholder"><div>130. Cogwheel Turn (Implement Me)</div></div>`,
+      // --- IMPLEMENTED NEW LOADERS (126-130) ---
+      "126-segmented-ring-fill": `<div class="loader-segmented-ring-fill"></div>`,
+      "127-hypno-wheel": `<div class="loader-hypno-wheel"></div>`,
+      "128-gear-system": `<div class="loader-gear-system"></div>`,
+      "129-hexagon-spinner": `<div class="loader-hexagon-spinner"></div>`,
+      "130-cogwheel-turn": `<div class="loader-cogwheel-turn"></div>`,
+
+      // --- Placeholder Loaders (131-200) - TO BE IMPLEMENTED ---
       "131-torus-knot-spin": `<div class="loader-placeholder"><div>131. Torus Knot Spin (Implement Me)</div></div>`,
       "132-propeller-blur": `<div class="loader-placeholder"><div>132. Propeller Blur (Implement Me)</div></div>`,
       "133-galaxy-swirl": `<div class="loader-placeholder"><div>133. Galaxy Swirl (Implement Me)</div></div>`,
@@ -209,7 +211,7 @@
       "197-shuffling-cards": `<div class="loader-placeholder"><div>197. Shuffling Cards (Implement Me)</div></div>`,
       "198-connecting-nodes": `<div class="loader-placeholder"><div>198. Connecting Nodes (Implement Me)</div></div>`,
       "199-glitch-effect-square": `<div class="loader-placeholder"><div>199. Glitch Effect Square (Implement Me)</div></div>`,
-      "200-infinity-loop-trace": `<div class="loader-placeholder"><div>200. Infinity Loop Trace (Implement Me)</div></div>`,
+      "200-infinity-loop-trace": `<div class="loader-placeholder"><div>200. Infinity Loop Trace (Implement Me)</div></div>`
     };
 
     // Element references
