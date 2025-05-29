@@ -141,39 +141,47 @@
       "129-hexagon-spinner": `<div class="loader-hexagon-spinner"></div>`,
       "130-cogwheel-turn": `<div class="loader-cogwheel-turn"></div>`,
 
-      // --- Placeholder Loaders (131-200) - TO BE IMPLEMENTED ---
-      "131-torus-knot-spin": `<div class="loader-placeholder"><div>131. Torus Knot Spin (Implement Me)</div></div>`,
-      "132-propeller-blur": `<div class="loader-placeholder"><div>132. Propeller Blur (Implement Me)</div></div>`,
-      "133-galaxy-swirl": `<div class="loader-placeholder"><div>133. Galaxy Swirl (Implement Me)</div></div>`,
-      "134-spirograph-path": `<div class="loader-placeholder"><div>134. Spirograph Path (Implement Me)</div></div>`,
-      "135-broken-ring-spin": `<div class="loader-placeholder"><div>135. Broken Ring Spin (Implement Me)</div></div>`,
-      "136-heartbeat-pulse": `<div class="loader-placeholder"><div>136. Heartbeat Pulse (Implement Me)</div></div>`,
-      "137-sonar-ping": `<div class="loader-placeholder"><div>137. Sonar Ping (Implement Me)</div></div>`,
-      "138-droplet-ripple": `<div class="loader-placeholder"><div>138. Droplet Ripple (Implement Me)</div></div>`,
-      "139-breathing-square": `<div class="loader-placeholder"><div>139. Breathing Square (Implement Me)</div></div>`,
-      "140-cell-division": `<div class="loader-placeholder"><div>140. Cell Division (Implement Me)</div></div>`,
-      "141-star-twinkle": `<div class="loader-placeholder"><div>141. Star Twinkle (Implement Me)</div></div>`,
-      "142-bubble-pop": `<div class="loader-placeholder"><div>142. Bubble Pop (Implement Me)</div></div>`,
-      "143-square-grid-wave-pulse": `<div class="loader-placeholder"><div>143. Square Grid Wave Pulse (Implement Me)</div></div>`,
-      "144-expanding-cross": `<div class="loader-placeholder"><div>144. Expanding Cross (Implement Me)</div></div>`,
-      "145-concentric-diamond-pulse": `<div class="loader-placeholder"><div>145. Concentric Diamond Pulse (Implement Me)</div></div>`,
-      "146-vertical-bar-shuffle": `<div class="loader-placeholder"><div>146. Vertical Bar Shuffle (Implement Me)</div></div>`,
-      "147-line-graph-draw": `<div class="loader-placeholder"><div>147. Line Graph Draw (Implement Me)</div></div>`,
-      "148-equalizer-dots": `<div class="loader-placeholder"><div>148. Equalizer Dots (Implement Me)</div></div>`,
-      "149-rainbow-bar-sweep": `<div class="loader-placeholder"><div>149. Rainbow Bar Sweep (Implement Me)</div></div>`,
-      "150-intertwined-lines": `<div class="loader-placeholder"><div>150. Intertwined Lines (Implement Me)</div></div>`,
-      "151-laser-scan-lines": `<div class="loader-placeholder"><div>151. Laser Scan Lines (Implement Me)</div></div>`,
-      "152-matrix-rain-simplified": `<div class="loader-placeholder"><div>152. Matrix Rain (Simplified) (Implement Me)</div></div>`,
-      "153-stretching-line-array": `<div class="loader-placeholder"><div>153. Stretching Line Array (Implement Me)</div></div>`,
-      "154-angled-bar-march": `<div class="loader-placeholder"><div>154. Angled Bar March (Implement Me)</div></div>`,
-      "155-bar-code-scan": `<div class="loader-placeholder"><div>155. Bar Code Scan (Implement Me)</div></div>`,
-      "156-dot-matrix-formation": `<div class="loader-placeholder"><div>156. Dot Matrix Formation (Implement Me)</div></div>`,
-      "157-grid-dot-chase": `<div class="loader-placeholder"><div>157. Grid Dot Chase (Implement Me)</div></div>`,
-      "158-bouncing-ball-grid": `<div class="loader-placeholder"><div>158. Bouncing Ball Grid (Implement Me)</div></div>`,
-      "159-random-dot-appear": `<div class="loader-placeholder"><div>159. Random Dot Appear (Implement Me)</div></div>`,
-      "160-dot-constellation": `<div class="loader-placeholder"><div>160. Dot Constellation (Implement Me)</div></div>`,
-      "161-grid-cell-highlight": `<div class="loader-placeholder"><div>161. Grid Cell Highlight (Implement Me)</div></div>`,
-      "162-falling-dots-tetris-like": `<div class="loader-placeholder"><div>162. Falling Dots (Tetris-like) (Implement Me)</div></div>`,
+      // --- NEXT BATCH (131-140) - NEWLY IMPLEMENTED ---
+      "131-torus-knot-spin": `<div class="loader-torus-knot-spin"></div>`,
+      "132-propeller-blur": `<div class="loader-propeller-blur"></div>`,
+      "133-galaxy-swirl": `<div class="loader-galaxy-swirl"></div>`,
+      "134-spirograph-path": `<div class="loader-spirograph-path"></div>`,
+      "135-broken-ring-spin": `<div class="loader-broken-ring-spin"></div>`,
+      "136-heartbeat-pulse": `<div class="loader-heartbeat-pulse"></div>`,
+      "137-sonar-ping": `<div class="loader-sonar-ping"></div>`,
+      "138-droplet-ripple": `<div class="loader-droplet-ripple"></div>`,
+      "139-breathing-square": `<div class="loader-breathing-square"></div>`,
+      "140-cell-division": `<div class="loader-cell-division"></div>`,
+
+      // --- Placeholder Loaders (141-200) - TO BE IMPLEMENTED ---
+      "141-magnetic-field": `<div class="loader-magnetic-field"></div>`,
+      "142-clock-pendulum": `<div class="loader-clock-pendulum"></div>`,
+      "143-square-grid-wave-pulse": `<div class="loader-square-grid-wave-pulse">${'<div></div>'.repeat(16)}</div>`,
+      "144-expanding-cross": `<div class="loader-expanding-cross"></div>`,
+      "145-dna-double-helix": `<div class="loader-dna-double-helix"><div class="helix-strand"></div><div class="helix-strand"></div></div>`,
+      "146-plasma-ball": `<div class="loader-plasma-ball"></div>`,
+      "147-fibonacci-spiral": `<div class="loader-fibonacci-spiral"></div>`,
+      "148-quantum-dots": `<div class="loader-quantum-dots"><div class="quantum-dot"></div><div class="quantum-dot"></div><div class="quantum-dot"></div></div>`,
+      "149-ripple-wave": `<div class="loader-ripple-wave"><div class="wave-ring"></div><div class="wave-ring"></div><div class="wave-ring"></div><div class="wave-ring"></div></div>`,
+      "150-morphing-blobs": `<div class="loader-morphing-blobs"><div class="blob"></div><div class="blob"></div><div class="blob"></div><div class="blob"></div></div>`,
+
+      // --- Placeholder Loaders (151-200) - TO BE IMPLEMENTED ---
+      "151-hologram-flicker": `<div class="loader-hologram-flicker"></div>`,
+      "152-neuron-network": `<div class="loader-neuron-network"><div class="neuron"></div><div class="neuron"></div><div class="neuron"></div><div class="neuron"></div><div class="neuron"></div></div>`,
+      "153-stretching-line-array": `<div class="loader-stretching-line-array"><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div></div>`,
+      "154-angled-bar-march": `<div class="loader-angled-bar-march"><div class="bar"></div><div class="bar"></div><div class="bar"></div></div>`,
+      "155-binary-stream-matrix": `<div class="loader-binary-stream-matrix"><div class="binary-stream">01</div><div class="binary-stream">10</div><div class="binary-stream">11</div><div class="binary-stream">00</div></div>`,
+      "156-circuit-board-trace": `<div class="loader-circuit-board-trace"></div>`,
+      "157-digital-rain-effect": `<div class="loader-digital-rain-effect"><div class="rain-drop">0</div><div class="rain-drop">1</div><div class="rain-drop">0</div><div class="rain-drop">1</div><div class="rain-drop">0</div></div>`,
+      "158-laser-grid-scanner": `<div class="loader-laser-grid-scanner"></div>`,
+      "159-electron-beam-sweep": `<div class="loader-electron-beam-sweep"></div>`,
+      "160-glitch-text-effect": `<div class="loader-glitch-text-effect"></div>`,
+
+      // --- Nature & Organic Loaders (161-170) - TO BE IMPLEMENTED ---
+      "161-tree-branch-growth": `<div class="loader-placeholder"><div>161. Tree Branch Growth (Implement Me)</div></div>`,
+      "162-water-ripple-pool": `<div class="loader-placeholder"><div>162. Water Ripple Pool (Implement Me)</div></div>`,
+
+      // --- Placeholder Loaders (171-200) - TO BE IMPLEMENTED ---
       "163-dot-wave-2d": `<div class="loader-placeholder"><div>163. Dot Wave 2D (Implement Me)</div></div>`,
       "164-pixel-sort-abstract": `<div class="loader-placeholder"><div>164. Pixel Sort (Abstract) (Implement Me)</div></div>`,
       "165-molecular-dots": `<div class="loader-placeholder"><div>165. Molecular Dots (Implement Me)</div></div>`,
@@ -438,8 +446,4 @@
                 showLoader(currentIndex);
             }
         });
-    });
-</script>
-
-</body>
-</html> 
+    }); 
