@@ -1,3 +1,12 @@
+/* Accessibility: Respect user preference for reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
 /* General Styles */
 html, body {
   margin: 0;
@@ -1424,7 +1433,7 @@ button:hover {
 }
 @keyframes hexagon-spin { 
     0%, 100% { transform: rotate(0deg) scale(1); } 
-    animation-delay: 0.2s; 
+    50% { transform: rotate(180deg) scale(1.1); }
 }
 .loader-neural-pathway .connection:nth-child(5) { 
     top: 13px; 
@@ -2326,4 +2335,56 @@ button:hover {
     --loader-color-alt: #666;
     --loader-color-secondary: #999;
     --loader-color-accent: #555;
+}
+
+:root {
+  --loader-color: #333;
+  --loader-color-alt: #666;
+}
+
+/* Responsive Design Improvements */
+@media (max-width: 768px) {
+  /* Reduce loader sizes on mobile devices */
+  .loader-pulse, .loader-ring, .loader-dual-ring, .loader-flower,
+  .loader-circle-spin, .loader-border-circle, .loader-border-spinner-dotted,
+  .loader-border-spinner-partial, .loader-border-rotate {
+    width: 40px !important;
+    height: 40px !important;
+  }
+  
+  /* Adjust cube and square loaders */
+  .loader-cube, .loader-box-scale, .loader-square-fade, .loader-diamond-pulse,
+  .loader-flipping-square-alt, .loader-spinning-square {
+    width: 30px !important;
+    height: 30px !important;
+  }
+  
+  /* Reduce grid loaders */
+  .loader-grid, .loader-square-grid-alt, .loader-square-grid-pulse {
+    transform: scale(0.8);
+  }
+  
+  /* Adjust line loaders */
+  .loader-progress-line, .loader-rectangular {
+    width: 80px !important;
+  }
+  
+  /* Make wave loaders more compact */
+  .loader-wave, .loader-line-scale, .loader-line-pulse, .loader-line-scale-up {
+    transform: scale(0.9);
+  }
+}
+
+@media (max-width: 480px) {
+  /* Further reduce sizes for very small screens */
+  .loader-pulse, .loader-ring, .loader-dual-ring, .loader-flower,
+  .loader-circle-spin, .loader-border-circle {
+    width: 35px !important;
+    height: 35px !important;
+  }
+  
+  .loader-cube, .loader-box-scale, .loader-square-fade {
+    width: 25px !important;
+    height: 25px !important;
+  }
 }
